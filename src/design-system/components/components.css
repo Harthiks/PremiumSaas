@@ -1,0 +1,175 @@
+/**
+ * KodNest Premium Build System — Base components
+ * Tokens only. Same radius, same hover, same focus everywhere.
+ */
+
+/* Buttons */
+.kn-btn {
+  font-family: var(--kn-font-sans);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  padding: var(--kn-space-1) var(--kn-space-2);
+  border-radius: var(--kn-radius);
+  border: var(--kn-border-width) solid transparent;
+  cursor: pointer;
+  transition: background-color var(--kn-transition), border-color var(--kn-transition), color var(--kn-transition);
+}
+
+.kn-btn--primary {
+  background: var(--kn-accent);
+  color: var(--kn-bg);
+  border-color: var(--kn-accent);
+}
+
+.kn-btn--primary:hover {
+  filter: brightness(0.88);
+}
+
+.kn-btn--secondary {
+  background: transparent;
+  color: var(--kn-text);
+  border-color: var(--kn-neutral);
+}
+
+.kn-btn--secondary:hover {
+  border-color: var(--kn-text);
+  color: var(--kn-text);
+}
+
+/* Inputs */
+.kn-input {
+  font-family: var(--kn-font-sans);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  padding: var(--kn-space-1) var(--kn-space-2);
+  border: var(--kn-border-width) solid var(--kn-neutral);
+  border-radius: var(--kn-radius);
+  background: var(--kn-bg);
+  color: var(--kn-text);
+  width: 100%;
+  max-width: 100%;
+  transition: border-color var(--kn-transition);
+}
+
+.kn-input:focus {
+  outline: none;
+  border-color: var(--kn-accent);
+}
+
+.kn-input::placeholder {
+  color: var(--kn-neutral);
+}
+
+/* Cards */
+.kn-card {
+  padding: var(--kn-space-3);
+  border: var(--kn-border-width) solid var(--kn-neutral);
+  border-radius: var(--kn-radius);
+  background: var(--kn-bg);
+}
+
+.kn-card__title {
+  font-family: var(--kn-font-serif);
+  font-size: var(--kn-heading-size-3);
+  font-weight: 600;
+  letter-spacing: var(--kn-heading-spacing);
+  color: var(--kn-text);
+  margin: 0 0 var(--kn-space-2);
+}
+
+.kn-card__body {
+  font-family: var(--kn-font-sans);
+  font-size: var(--kn-body-size);
+  line-height: var(--kn-body-line);
+  color: var(--kn-text);
+  margin: 0;
+  max-width: var(--kn-text-max-width);
+}
+
+/* Copyable box */
+.kn-copyable-box {
+  margin-bottom: var(--kn-space-3);
+}
+
+.kn-copyable-box__content {
+  font-family: var(--kn-font-sans);
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  padding: var(--kn-space-2);
+  border: var(--kn-border-width) solid var(--kn-neutral);
+  border-radius: var(--kn-radius);
+  background: var(--kn-bg);
+  color: var(--kn-text);
+  margin: 0 0 var(--kn-space-2);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.kn-copyable-box__btn {
+  margin-top: 0;
+}
+
+/* Button group in secondary panel */
+.kn-btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--kn-space-2);
+  margin-top: var(--kn-space-3);
+}
+
+/* Error state */
+.kn-error-state {
+  padding: var(--kn-space-3);
+  border: var(--kn-border-width) solid var(--kn-neutral);
+  border-radius: var(--kn-radius);
+  background: var(--kn-bg);
+}
+
+.kn-error-state__title {
+  font-family: var(--kn-font-serif);
+  font-size: var(--kn-heading-size-3);
+  font-weight: 600;
+  letter-spacing: var(--kn-heading-spacing);
+  color: var(--kn-text);
+  margin: 0 0 var(--kn-space-2);
+}
+
+.kn-error-state__message {
+  font-family: var(--kn-font-sans);
+  font-size: var(--kn-body-size);
+  line-height: var(--kn-body-line);
+  color: var(--kn-text);
+  margin: 0 0 var(--kn-space-2);
+}
+
+.kn-error-state__fix {
+  font-family: var(--kn-font-sans);
+  font-size: 0.9375rem;
+  line-height: var(--kn-body-line);
+  color: var(--kn-neutral);
+  margin: 0;
+}
+
+/* Empty state */
+.kn-empty-state {
+  padding: var(--kn-space-4);
+  text-align: center;
+  border: var(--kn-border-width) solid var(--kn-neutral);
+  border-radius: var(--kn-radius);
+  background: var(--kn-bg);
+}
+
+.kn-empty-state__message {
+  font-family: var(--kn-font-sans);
+  font-size: var(--kn-body-size);
+  line-height: var(--kn-body-line);
+  color: var(--kn-neutral);
+  margin: 0 0 var(--kn-space-3);
+  max-width: var(--kn-text-max-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.kn-empty-state__action {
+  margin-top: var(--kn-space-2);
+}
